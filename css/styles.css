@@ -62,6 +62,7 @@ body {
   list-style-type: none;
   display: flex;
   margin-left: 76px;
+  position: relative;
 }
 .site-nav .nav {
   display: block;
@@ -112,6 +113,20 @@ body {
 }
 .holder {
   margin-left: auto;
+}
+.navigation-active::after {
+  content: "";
+  position: absolute;
+  margin-top: 24px;
+  display: block;
+  background: #404bbf;
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+  opacity: 0;
+}
+.navigation-active:active {
+  opacity: 1;
 }
 /* Секция Герой */
 .title {
@@ -507,4 +522,45 @@ button {
 }
 .huge {
   padding: 32px 16px;
+}
+
+.thumb-photo::before {
+  content: "";
+  position: absolute;
+  background: #4d5ae5;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  opacity: 0;
+}
+.thumb-photo {
+  display: block;
+  position: relative;
+}
+.thumb-photo:hover:before,
+.thumb-photo:focus:before {
+  opacity: 1;
+}
+.thumb-list {
+  display: block;
+  position: absolute;
+  width: 360px;
+  height: 300px;
+  left: 0px;
+  top: 0px;
+}
+.thumb-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px 164px 32px;
+  opacity: 0;
+}
+.thumb-text:hover,
+.thumb-text:focus {
+  opacity: 1;
 }
