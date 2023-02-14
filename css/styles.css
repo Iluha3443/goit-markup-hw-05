@@ -32,7 +32,7 @@ body {
   width: 1158px;
 }
 .headert {
-  padding: 24px 0;
+  padding-top: 24px;
   border-bottom: 1px solid #e7e9fc;
 }
 
@@ -81,6 +81,7 @@ body {
 .navigation {
   display: flex;
   text-align: center;
+  padding-bottom: 28px;
 }
 .nav:hover,
 .nav:focus {
@@ -117,16 +118,22 @@ body {
 .navigation-active::after {
   content: "";
   position: absolute;
-  margin-top: 24px;
   display: block;
   background: #404bbf;
   border-radius: 2px;
   width: 48px;
   height: 4px;
-  opacity: 0;
+  margin-top: 24px;
 }
-.navigation-active:active {
-  opacity: 1;
+.nav-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #404bbf;
+  border-radius: 2px;
+  width: 66px;
+  height: 4px;
+  margin-top: 24px;
 }
 /* Секция Герой */
 .title {
@@ -523,34 +530,27 @@ button {
 .huge {
   padding: 32px 16px;
 }
-
-.thumb-photo::before {
-  content: "";
+.overlay-position {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
   position: absolute;
   background: #4d5ae5;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  display: inline-block;
   opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.thumb-photo {
-  display: block;
-  position: relative;
-}
-.thumb-photo:hover:before,
-.thumb-photo:focus:before {
+
+.thumb:hover .overlay {
   opacity: 1;
+  transform: translateY(0);
 }
-.thumb-list {
-  display: block;
-  position: absolute;
-  width: 360px;
-  height: 300px;
-  left: 0px;
-  top: 0px;
-}
+
 .thumb-text {
   font-weight: 400;
   font-size: 16px;
@@ -558,9 +558,12 @@ button {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   padding: 40px 32px 164px 32px;
-  opacity: 0;
-}
-.thumb-text:hover,
-.thumb-text:focus {
-  opacity: 1;
+  /* opacity: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  position: absolute;
+  width: 360px;
+  height: 300px;
+  left: 0px;
+  top: 0px; */
 }
