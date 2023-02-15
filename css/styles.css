@@ -86,6 +86,8 @@ body {
 .nav:hover,
 .nav:focus {
   color: #404bbf;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .address-list {
   text-decoration: none;
@@ -111,6 +113,8 @@ body {
 .address-list:hover,
 .address-list:focus {
   color: #404bbf;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .holder {
   margin-left: auto;
@@ -167,6 +171,8 @@ button {
 .btn:hover,
 .btn:focus {
   background-color: #404bbf;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .btn-tiny {
   list-style-type: none;
@@ -193,6 +199,8 @@ button {
 .btn-large:focus {
   background-color: #404bbf;
   color: #ffffff;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .btn {
   font-weight: 500;
@@ -323,6 +331,8 @@ button {
 .userpic-item-list:hover,
 .userpic-item-list:focus {
   background: #404bbf;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .content-last {
@@ -386,12 +396,16 @@ button {
 }
 .icons-item:is(:hover, :focus) .icons-item-list {
   fill: #404bbf;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .icons-list:hover,
 .icons-list:focus {
   fill: #404bbf;
   border: 1px solid #404bbf;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .icons-item {
@@ -494,6 +508,8 @@ button {
 .subtitle-item:hover,
 .subtitle-item:focus {
   background: #31d0aa;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 /* Portfolio */
 
@@ -510,6 +526,8 @@ button {
 .item-list:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .item-list:nth-child(3n) {
   margin-right: 0px;
@@ -612,4 +630,10 @@ button {
   right: 24px;
   width: 24px;
   height: 24px;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background: #404bbf;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
