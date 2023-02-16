@@ -619,6 +619,7 @@ button {
   position: absolute;
   transform: translate(-50%, -50%);
 }
+
 .modal-btn {
   position: absolute;
   right: 0%;
@@ -634,6 +635,11 @@ button {
 .modal-btn:hover,
 .modal-btn:focus {
   background: #404bbf;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.modal-btn:is(:hover, :focus) .modal-svg {
+  fill: #ffffff;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
